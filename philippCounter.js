@@ -1,7 +1,9 @@
 var dPhilippPlzPlus = 0;
 var dPhilippPlzMinus = 0;
 var $linesAdded = $('.lines-added');
-var dPhilippFiles = $linesAdded.size();
+var dPhilippPlzAdded = $("[original-title='Added']").length;
+var dPhilippPlzDeleted = $("[original-title='Deleted']").length;
+var dPhilippPlzEdited = $("[original-title='Modified']").length;
 
 $linesAdded.each(function(){
 	var d = $(this).text();
@@ -19,4 +21,8 @@ $('.lines-removed').each(function(){
 
 console.log(dPhilippPlzPlus + ' Zeilen hinzugefügt.');
 console.log(dPhilippPlzMinus + ' Zeilen entfernt.');
-console.log(dPhilippFiles + ' Dateien geändert.');
+console.log(dPhilippPlzAdded + ' Dateien hinzugefügt.');
+console.log(dPhilippPlzEdited + ' Dateien geändert.');
+console.log(dPhilippPlzDeleted + ' Dateien entfernt.');
+
+alert(dPhilippPlzPlus + ' Zeilen hinzugefügt.\n' + dPhilippPlzMinus + ' Zeilen entfernt.\n' + dPhilippPlzAdded + ' Dateien hinzugefügt.\n' + dPhilippPlzEdited + ' Dateien geändert.\n' + dPhilippPlzDeleted + ' Dateien entfernt.');
