@@ -3,7 +3,7 @@ var dPhilippPlzMinus = 0;
 var $linesAdded = $('.lines-added');
 var dPhilippPlzAdded = $("[original-title='Added']").length;
 var dPhilippPlzDeleted = $("[original-title='Deleted']").length;
-var dPhilippPlzEdited = $("[original-title='Modified']").length;
+var dPhilippPlzEdited = $("[original-title='Modified'],[original-title^='Conflict']").length;
 
 $linesAdded.each(function(){
 	var d = $(this).text();
