@@ -25,4 +25,14 @@ console.log(dPhilippPlzAdded + ' Dateien hinzugefügt.');
 console.log(dPhilippPlzEdited + ' Dateien geändert.');
 console.log(dPhilippPlzDeleted + ' Dateien entfernt.');
 
-alert(dPhilippPlzPlus + ' Zeilen hinzugefügt.\n' + dPhilippPlzMinus + ' Zeilen entfernt.\n' + dPhilippPlzAdded + ' Dateien hinzugefügt.\n' + dPhilippPlzEdited + ' Dateien geändert.\n' + dPhilippPlzDeleted + ' Dateien entfernt.');
+var text = "";
+
+if (dPhilippPlzPlus > 0) text += dPhilippPlzPlus + ' Zeilen hinzugefügt.\n';
+if (dPhilippPlzMinus > 0) text += dPhilippPlzMinus + ' Zeilen entfernt.\n';
+if (dPhilippPlzAdded > 0) text += dPhilippPlzAdded + ' Dateien hinzugefügt.\n';
+if (dPhilippPlzEdited > 0) text += dPhilippPlzEdited + ' Dateien geändert.\n';
+if (dPhilippPlzDeleted > 0) text += dPhilippPlzDeleted + ' Dateien entfernt.\n';
+
+text = text.slice(0, -2);
+
+alert(text);
